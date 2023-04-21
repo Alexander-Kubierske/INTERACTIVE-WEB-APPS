@@ -1,0 +1,19 @@
+<!-- index.html -->
+
+<html>
+	<head>
+		<script src="javaScript/scripts.js" defer type="module"></script>
+		<!-- there are a few errors here:
+		3. the scripts tag should be script
+		2. the script tag did not have a closing (</script>) tag 
+		3. the brief asks that the .js file loads after the html :. the .js needs to be defered to stop render blocking
+		4. due to the given setup of our .js files we will be importing info between the .js files :. our html needs to know we are using the module structure-->
+  </head>
+
+	<body>
+		<h1>Welcome</h1>
+		<p>This is our website</p>
+	</body>
+
+	<footer>Loading...</footer>
+</html>
