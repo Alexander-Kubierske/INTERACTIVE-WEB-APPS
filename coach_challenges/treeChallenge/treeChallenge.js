@@ -42,8 +42,13 @@ button.addEventListener ('click', myFunction)
 
 // my original assignment without any help would print in consol and looked like this:
 
-for (let i = 0; i; i++) {
-    tree += '*'
-    console.log (tree)
-}
+// var tree = "*"
+
+// for (let i = 0; i <=4 ; i++) {
+//     tree += '*'
+//     console.log (tree)
+// }
+
+// after some research i found that by having var tree = "*" our tree would print 2 on top instead of one
+// this model also had 0 integration with html and had to process the tree in the javascript with no way for a user to interface easily
 
