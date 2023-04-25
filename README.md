@@ -1,1 +1,1 @@
-Interactive Web Apps course Code Space
+Interactive Web Apps course Code Space by Alexander Kubierske
