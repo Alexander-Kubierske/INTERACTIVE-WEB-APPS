@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Team</title>
-
+<!-- 
     <script src="javaScript/nwabisa.js" type="module" defer></script>
     <script src="javaScript/johannes.js" type="module" defer></script>
-    <script src="javaScript/alex.js" type="module" defer></script>
-    <script src="javaScript/scripts.js" type="module"></script>
+    <script src="javaScript/alex.js" type="module" defer></script> -->
+<!-- no need to import these as our scripts.js handles the import info -->
+    
+    <script src="javaScript/scripts.js" type="module" defer></script>
 
     <!-- there are multiple errors here:
     1. the html document format was incorrect with no <head>
@@ -17,7 +19,7 @@
     3. module is an outdated call feature and was thus changed to type=module
     4. corrected the source paths including file type
     5. deferred items that needed to load after html
-    6. async scripts.js as it is consol logged and does not affect html
+    6. async scripts.js as it is console logged and does not affect html
     7. changed the scripts.js call to be a type=module in order to make the code work.
     -->
 </head>

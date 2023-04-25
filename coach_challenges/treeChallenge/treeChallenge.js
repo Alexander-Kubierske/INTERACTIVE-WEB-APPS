@@ -21,7 +21,7 @@ const myFunction = () => {
     var iterations = parseInt(document.getElementById("iterationAmount").value);
     // this retrieves the user input to tell us how many lines and thus times this should iterate
     
-    for (let i = 1; i <= iterations; i++) { 
+    for (let i = 1;  i++i <= iterations; i++) { 
         // here we run a loop. first we define i which runs before the code in "{}",
         // next we say how many times the loop should run
         // finally we increment the code in the loop
