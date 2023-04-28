@@ -1,5 +1,5 @@
 const DATE= 2050;
-let STATUS= 'parent';
+let STATUS= 'student';
 // changed the (:) to (=)
 // changed to (let) as the status can be both or either or 'student'/'parent' but will never change due to const declaration
 let COUNT = 0;
