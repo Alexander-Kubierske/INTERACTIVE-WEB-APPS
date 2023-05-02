@@ -1,17 +1,17 @@
-const primaryPhone = 'O748105141'
-const secondaryPhone = '0219131568'
+const primaryPhone = '0748105141'
+const secondaryPhone = 'o219131568'
 
 // Only change below this line
 
-console.log(Number(primaryPhone))
-console.log(parseInt(primaryPhone))
+// console.log(Number(primaryPhone))
+// console.log(parseInt(primaryPhone))
 
-const primaryValid = Number(primaryPhone) ===  parseInt(secondaryPhone)
-const secondaryValid = Number(secondaryPhone)  === parseInt(secondaryPhone)
+const primaryValid = Number(primaryPhone) ===  parseInt(primaryPhone);
+const secondaryValid = Number(secondaryPhone)  === parseInt(secondaryPhone);
 
 // change log:
 // removed type of as NaN is still considered a number and will always return a number
-// converted the global consts to a number with Number()
+// converted the global const to a number with Number()
 // strict equated them
 // parseInt() our global const to coerce them to a number
 

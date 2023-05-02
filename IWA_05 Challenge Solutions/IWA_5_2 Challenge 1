@@ -17,6 +17,7 @@ if (location === 'RSA') {
         shipping = 400; 
         currency = 'R'; 
 } else {
+    // can be replaced by running a if  bolean shipping = location === 'NAM' ? 600 : 800
     if (location === 'NAM'){
         shipping = 600;
         currency = '$';
