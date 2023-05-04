@@ -68,3 +68,6 @@ console.log('Secondary phone is a valid numerical string:', secondaryValid )
 // but as explained above NaN != NaN. so our check would basically ask:
 // if the Number() value is equal to the number given then true
 // if the Number() value is NaN then it wont equal the value given even if we compare it to the number given converted to a number
+
+// const primaryValid = !Number.isNaN(parseInt(primaryPhone))
+// const secondaryValid = !Number.isNaN(parseInt(secondaryPhone))

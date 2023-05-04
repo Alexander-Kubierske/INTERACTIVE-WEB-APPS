@@ -24,7 +24,7 @@ if ((hourOfDay !== null) || (minuteOfDay !== null) && (hourOfDay === 00) && (min
 	// referenced startingAfterTax and not Starting
 }
 	
-console.log('R', parseInt(balance).toFixed(2))
+console.log('R', balance.toFixed(2))
 // changed toFixed(2) as is required
 
 // debug:
