@@ -1,7 +1,7 @@
-const nickname= "Timmy";
-const firstName = "Timothy";
+const nickname= "";
+const firstName = "";
 
-console.log(`Good Morning`, !nickname.valueOf() ? firstName : nickname, `!`)
+console.log(`Good Morning` + ((!nickname.valueOf()? ` ` + firstName : ` ` + nickname)) + `!`)
 
 // the code initially did not separate each element or object and had it all grouped under a "" 
 // this would explain why the text as written was logged.
