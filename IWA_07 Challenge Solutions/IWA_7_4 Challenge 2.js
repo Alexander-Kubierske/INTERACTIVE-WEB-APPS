@@ -1,5 +1,5 @@
-const nickname= "";
-const firstName = "";
+const nickname= "Timmy";
+const firstName = "Timothy";
 
 console.log(`Good Morning` + ((!nickname.valueOf()? ` ` + firstName : ` ` + nickname)) + `!`)
 

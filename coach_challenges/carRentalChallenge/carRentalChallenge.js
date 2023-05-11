@@ -3,7 +3,7 @@
 // Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
 // Write a code that gives out the total amount for different days(d).
 
-let days = 7;
+let days = 1;
 let charge = 40;
 
 // initial operation
@@ -33,5 +33,5 @@ if (days >= 3 && days < 7) {
 //         charge - 50
 //         console.log(`For `, days, `the price will be $`, charge)
 // }   
-// debug
+// // debug
 // console.log(days, `\n`, charge, `\n`, a, `\n`, b)
