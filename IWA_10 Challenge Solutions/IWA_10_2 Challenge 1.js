@@ -61,7 +61,7 @@ if (holidays[9] === undefined) {
     console.log(holidays[9].name)
 }
 
-copied = holidays.christmas
+const copied = holidays.christmas;
 // here we need to make our copy equal to the object christmas as specified by brief
 copied = { 
     id: holidays[6].id,
