@@ -44,8 +44,7 @@ const createData = () => {
     //missing an = sign
     const current = new Date(); 
     //here we redeclare current instead of passing it through presumably as we want to edit it within the function scope
-    current.setDate(1); //this sets the day to 1 
-    // also not sure of this
+    current.setDate(1); //this sets the day to 1 so we can use it to calculate the month from the starting day
 
     const startDayMonth = current.getDay(); 
     // this gets the day of the week that the month starts on 
@@ -61,27 +60,37 @@ const createData = () => {
 
     /**
      * Here we create a matrix with the amount of weeks on one axis and the days on the other
-     * @param{result[]}
+     * the array when printed looks like this:
+     * week: weekIndex +1 (ie 1-5)
+     * days:[7 items with either a number according to the week or a blank item]
      */
-    for (let weekIndex = 0; weekIndex < weeks.length; weekIndex++) { // for each item in this array do this action
+    for (let weekIndex = 0; weekIndex < weeks.length; weekIndex++) { 
+        // changed to a for loop so we could control the weekIndex instead of just its read value
         result.push({
             week: weekIndex + 1,
             days:[]
         })
 
         /**
-         * this is where we create the days axis check the date in each item
+         * this is where we create the days axis check the date in each item according to which week it is in
          */
         for (let daysArrayIndex = 0; daysArrayIndex < daysArray.length; daysArrayIndex++) {
-            console.log('days:', Number(daysArrayIndex), 'startDayMonth:', startDayMonth, 'weekIndex:', weekIndex)
+            // debug 
+            // console.log('days:', Number(daysArrayIndex), 'startDayMonth:', startDayMonth, 'weekIndex:', weekIndex)
             const numberOfDays = Number(daysArrayIndex) - startDayMonth + (weekIndex * 7) + 1; 
             // this logic was flawed as it needed to calculate the date by looping with 7 days in a week according to the day of the week the month started on
-            const isValid = numberOfDays > 0 && numberOfDays <= daysInMonth; // this takes the days number and sees if 
-            console.log(numberOfDays)
+            // this works by taking the daysArrayIndex number and - the day of the week that the month started on (0-6) + (the week the weekIndex loop is in times 7)
+            // which gets us how many dates have come before the current week and adds one as we need the startDayMonth to be a number between 1-7
+            const isValid = numberOfDays > 0 && numberOfDays <= daysInMonth; 
+            // this takes the days number and sees if it is a number that falls between 1 and the number of days in this month.
+            // this will basically make sure that it is a day in the given month and not one of a previous/next month
+            // debug
+            // console.log(numberOfDays)
             
+            // here we add the actual date to the days array created at the beginning of the weekIndex for loop
             result[weekIndex].days.push({
                 // the problem we face here is that the weekIndex isn't a number explicit therefore the reference would fail to find
-                dayOfWeek: daysArrayIndex + 1, // this makes it so that we have the days start with monday instead of sunday
+                dayOfWeek: daysArrayIndex + 1, // +1 makes it so that we have the days start with monday instead of sunday
                 value: isValid ? numberOfDays : '', //this will print the date no. or a blank space depending on isValid
             })
         }
