@@ -168,7 +168,9 @@ const handleEditToggle = (event) => {
     // this again handles opening and closing and refocusing if canceled
     if (current) {
         html.edit.overlay.open = false;
+        html.edit.overlay.close();
         html.edit.currentOrder = null;
+        html.edit.form.reset();
         html.other.add.focus()
     } else {
         // here we just make sure that the values present in the input fields 
